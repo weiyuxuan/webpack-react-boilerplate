@@ -1,0 +1,20 @@
+{
+  "name": "react-boilerplate",
+  "version": "0.0.1",
+  "description": "A simple and easy boilerplate for web developer.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weiyuxuan/react-boilerplate.git"
+  },
+  "author": "Wei Yuxuan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/weiyuxuan/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/weiyuxuan/react-boilerplate#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.7"
+  }
+}
