@@ -3,10 +3,11 @@ const base = require("./webpack.conf.js");
 
 const { merge } = require("webpack-merge");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
-module.exports = merge(base, {
+const config = merge(base, {
   // Set the mode to production
   mode: "production",
   devtool: false,
@@ -25,7 +26,7 @@ module.exports = merge(base, {
   ],
   optimization: {
     minimize: true,
-    minimizer: [new OptimizeCssAssetsPlugin(), new TerserPlugin()],
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
     // Once your build outputs multiple chunks, this option will ensure they share the webpack runtime
     // instead of having their own. This also helps with long-term caching, since the chunks will only
     // change when actual code changes, not the webpack runtime.
@@ -39,3 +40,9 @@ module.exports = merge(base, {
     maxAssetSize: 512000,
   },
 });
+
+if (process.env.npm_config_report) {
+  config.plugins.push(new BundleAnalyzerPlugin({ analyzerPort: 3001 }));
+}
+
+module.exports = config;

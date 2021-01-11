@@ -4,7 +4,7 @@ const base = require("./webpack.conf.js");
 const { merge } = require("webpack-merge");
 const webpack = require("webpack");
 
-module.exports = merge(base, {
+const config = merge(base, {
   // Set the mode to development
   mode: "development",
 
@@ -18,7 +18,7 @@ module.exports = merge(base, {
     open: true,
     compress: true,
     hot: true,
-    port: 3030,
+    port: 3000,
   },
 
   plugins: [
@@ -26,3 +26,5 @@ module.exports = merge(base, {
     new webpack.HotModuleReplacementPlugin(),
   ],
 });
+
+module.exports = config;

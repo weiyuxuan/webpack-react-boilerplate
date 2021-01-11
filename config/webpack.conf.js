@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === 'development';
@@ -35,7 +36,7 @@ const styleLoaders = () => {
   return loaders.filter(Boolean);
 };
 
-module.exports = {
+const config = {
   // Entry Point
   entry: [`${paths.src}/index.js`],
 
@@ -76,6 +77,11 @@ module.exports = {
       ],
     }),
 
+    // Detect modules with circular dependencies
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+    }),
+
     // Generates an HTML file from a template
     new HtmlWebpackPlugin({
       favicon: paths.src + "/assets/icons/favicon.ico",
@@ -104,3 +110,5 @@ module.exports = {
     ],
   },
 };
+
+module.exports = config;
