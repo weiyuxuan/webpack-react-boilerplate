@@ -12,6 +12,10 @@ Checks if your commit messages meet the [conventional commit format](https://git
 
 Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page.
 
+#### Code Format
+
+With the right editor setup, your code will automatically be formatted and linted as you work.
+
 ## Quick Start
 
 1. Make sure that you have Node.js latest LTS version or above installed.

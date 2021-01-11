@@ -9,8 +9,8 @@
   "author": "Wei Yuxuan",
   "license": "Apache-2.0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.conf.js",
-    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.conf.js",
+    "dev": "cross-env NODE_ENV=development webpack serve --config build/webpack.dev.conf.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.conf.js",
     "lint": "eslint --ext .js,jsx . --fix",
     "stylelint": "stylelint 'src/**/*.scss' --syntax=scss --fix",
     "cspell": "cspell 'src/**/*.{jsx,js,scss}'",
