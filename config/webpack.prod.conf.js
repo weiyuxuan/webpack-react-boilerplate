@@ -10,12 +10,18 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const config = merge(base, {
   // Set the mode to production
   mode: "production",
+
+  // Control how source maps are generated
   devtool: false,
+
+  // Output Folder
   output: {
     path: paths.dist,
     publicPath: "/",
     filename: "js/[name].[contenthash].bundle.js",
   },
+
+  // Customize the webpack build process
   plugins: [
     // Extracts CSS into separate files
     // Note: style-loader is for development, MiniCssExtractPlugin is for production
@@ -24,6 +30,8 @@ const config = merge(base, {
       chunkFilename: "[id].css",
     }),
   ],
+
+  // Optimization codes
   optimization: {
     minimize: true,
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
@@ -34,6 +42,8 @@ const config = merge(base, {
       name: "runtime",
     },
   },
+
+  // Speed up
   performance: {
     hints: false,
     maxEntrypointSize: 512000,

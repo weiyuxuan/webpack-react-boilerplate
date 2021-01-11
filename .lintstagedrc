@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx}": "eslint --fix",
+  "src/**/*.{jsx,js,scss}": "cspell"
+}

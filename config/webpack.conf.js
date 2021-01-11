@@ -97,10 +97,7 @@ const config = {
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ["babel-loader"] },
 
       // Styles: Inject CSS into the head with source maps
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: styleLoaders(),
-      },
+      { test: /\.(sa|sc|c)ss$/, use: styleLoaders() },
 
       // Images: Copy image files to build folder
       { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: "asset/resource" },

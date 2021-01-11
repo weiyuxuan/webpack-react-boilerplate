@@ -4,22 +4,23 @@ A simple and easy boilerplate for web developer.
 
 ## Features
 
-### Commit Lint
+#### Commit Lint
 
 Checks if your commit messages meet the [conventional commit format](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional).
 
-### Hot Reload
+#### Hot Reload
 
 Your saved changes to the CSS and JS are reflected instantaneously without refreshing the page.
 
 ## Quick Start
 
-1. Make sure that you have Node.js LTS version or above installed.
+1. Make sure that you have Node.js latest LTS version or above installed.
 2. Clone this repo using `git clone --depth=1 https://github.com/weiyuxuan/react-boilerplate.git <YOUR_PROJECT_NAME>`
 3. Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
 4. Run `npm i` to install dependencies.
 5. Run `npm run dev` to see the example app at http://localhost:3000.
 6. Run `npm run build` to build production bundle.
+7. Run `npm run build --report` to dive into the bundle analysis.
 
 ## Dependencies
 
@@ -43,7 +44,7 @@ Your saved changes to the CSS and JS are reflected instantaneously without refre
 - [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
 - [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
 
-### Eslint
+### ESLint
 - [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier) - Turns off all rules that are unnecessary or might conflict with Prettier.
 - [`eslint-import-resolver-alias`](https://www.npmjs.com/package/eslint-import-resolver-alias) - a simple Node behavior import resolution plugin for eslint-plugin-import, supporting module alias.
 - [`eslint-plugin-babel`](https://www.npmjs.com/package/eslint-plugin-babel) - an eslint rule plugin companion to babel-eslint.

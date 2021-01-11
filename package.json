@@ -11,7 +11,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.conf.js",
     "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.conf.js",
-    "lint": "eslint src --ext .jsx --ext .js",
+    "lint": "eslint --ext .js,jsx . --fix",
+    "cspell": "cspell 'src/**/*.{jsx,js,scss}'",
     "check-update": "npm-check -u"
   },
   "bugs": {
@@ -31,6 +32,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.2",
+    "cspell": "^5.1.3",
     "css-loader": "^5.0.0",
     "css-minimizer-webpack-plugin": "^1.2.0",
     "eslint": "^7.11.0",
@@ -42,6 +44,7 @@
     "eslint-plugin-react": "^7.21.2",
     "html-webpack-plugin": "^5.0.0-alpha.3",
     "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
     "mini-css-extract-plugin": "^1.3.3",
     "npm-check": "^5.9.2",
     "prettier": "^2.1.2",
