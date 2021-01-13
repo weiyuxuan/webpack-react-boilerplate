@@ -1,11 +1,11 @@
 module.exports = {
   root: true,
+  parser: "babel-eslint",
   env: {
     es6: true,
     browser: true,
     node: true,
   },
-  parser: "babel-eslint",
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -13,14 +13,14 @@ module.exports = {
     "prettier/react",
   ],
   parserOptions: {
-    ecmaVersion: "2017",
+    ecmaVersion: "2020",
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,
     },
     sourceType: "module",
   },
-  plugins: ["babel", "react", "import", "prettier"],
+  plugins: ["babel", "react", "react-hooks", "import", "prettier"],
   rules: {},
   settings: {
     react: {

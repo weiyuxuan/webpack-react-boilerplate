@@ -11,6 +11,7 @@ const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === 'development';
 
 const styleLoaders = () => {
+  // Loaders are evaluated/executed from right to left (or from bottom to top).
   const loaders = [
     !isDev && MiniCssExtractPlugin.loader,
     isDev && "style-loader",
@@ -51,6 +52,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: [paths.src, paths.modules],
+    alias: {},
   },
 
   // Customize the webpack build process
