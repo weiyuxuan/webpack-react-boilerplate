@@ -8,7 +8,7 @@ A simple and easy boilerplate for react developer.
 
 Checks if your commit messages meet the [conventional commit format](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional).
 
-### Next generation JavaScript & CSS
+#### Next generation JavaScript & CSS
 
 Use ESNext and PostCSS to build your react app.
 
