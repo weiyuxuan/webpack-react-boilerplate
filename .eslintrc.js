@@ -21,7 +21,15 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['babel', 'react', 'react-hooks', 'import', 'prettier'],
-  rules: {},
+  rules: {
+    'arrow-parens': [2, 'always'],
+    'max-len': [2, { code: 80, ignoreStrings: true, ignoreComments: true }],
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    'no-console':
+      process.env.NODE_ENV === 'production'
+        ? [2, { allow: ['warn', 'error'] }]
+        : [1, { allow: ['warn', 'error'] }],
+  },
   settings: {
     react: {
       pragma: 'React',

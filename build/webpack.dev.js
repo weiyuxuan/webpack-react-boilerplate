@@ -13,12 +13,18 @@ const config = merge(base, {
 
   // Spin up a server for quick development
   devServer: {
+    hot: true,
+    compress: true,
     historyApiFallback: true,
     contentBase: paths.dist,
+    watchOptions: {
+      ignored: /node_modules/,
+    },
     open: true,
-    compress: true,
-    hot: true,
     port: 3000,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
 
   plugins: [

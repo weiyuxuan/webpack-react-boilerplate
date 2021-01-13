@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === 'development';
@@ -47,6 +48,9 @@ const config = {
   // Entry Point
   entry: [`${paths.src}/index.js`],
 
+  // Target
+  target: 'web',
+
   // Output Folder
   output: {
     path: paths.dist,
@@ -71,6 +75,11 @@ const config = {
 
     // Removes/cleans build folders and unused assets when rebuilding
     new CleanWebpackPlugin(),
+
+    // ESLint when building
+    new ESLintPlugin({
+      extensions: ['js', 'jsx'],
+    }),
 
     // Copies files from target to destination folder
     new CopyWebpackPlugin({
@@ -108,10 +117,22 @@ const config = {
       { test: /\.(sa|sc|c)ss$/, use: styleLoaders() },
 
       // Images: Copy image files to build folder
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: '[path][name].[ext]',
+        },
+      },
 
       // Fonts and SVGs: Inline files
-      { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
+      {
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name].[ext]',
+        },
+      },
     ],
   },
 };

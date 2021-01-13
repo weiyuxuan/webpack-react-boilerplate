@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 const config = merge(base, {
   // Set the mode to production
@@ -29,6 +30,9 @@ const config = merge(base, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
+
+    // Display build status system notifications to the user
+    new WebpackNotifierPlugin({ emoji: true }),
   ],
 
   // Optimization codes

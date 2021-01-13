@@ -38,17 +38,22 @@ With the right editor setup, your code will automatically be formatted and linte
 ### Babel
 
 - [`@babel/core`](https://www.npmjs.com/package/@babel/core) - Transpile ES6+ to backwards compatible JavaScript
-- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
 - [`@babel/preset-env`](https://babeljs.io/docs/en/babel-preset-env) - Smart defaults for Babel
+- [`@babel/preset-react`](https://babeljs.io/docs/en/babel-preset-react) - JSX support for Babel
+- [`@babel/plugin-proposal-class-properties`](https://babeljs.io/docs/en/babel-plugin-proposal-class-properties) - Use properties directly on a class (an example Babel config)
+- [`@babel/plugin-syntax-dynamic-import`](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import) - Support dynamic import syntax
+- [`babel-plugin-transform-react-remove-prop-types`](https://github.com/oliviertassinari/babel-plugin-transform-react-remove-prop-types) Remove unnecessary React propTypes from the production build
 
 ### Loaders
 
-- [`babel-loader`](https://webpack.js.org/loaders/babel-loader/) - Transpile files with Babel and webpack
-- [`sass-loader`](https://webpack.js.org/loaders/sass-loader/) - Load SCSS and compile to CSS
-- [`css-loader`](https://webpack.js.org/loaders/css-loader/) - Resolve CSS imports
-- [`style-loader`](https://webpack.js.org/loaders/style-loader/) - Inject CSS into the DOM
+- [`babel-loader`](https://webpack.js.org/loaders/babel-loader) - Transpile files with Babel and webpack
+- [`postcss-loader`](https://github.com/webpack-contrib/postcss-loader) - Loader to process CSS with PostCSS
+- [`sass-loader`](https://webpack.js.org/loaders/sass-loader) - Load SCSS and compile to CSS
+- [`css-loader`](https://webpack.js.org/loaders/css-loader) - Resolve CSS imports
+- [`style-loader`](https://webpack.js.org/loaders/style-loader) - Inject CSS into the DOM
 
 ### ESLint
+
 - [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier) - Turns off all rules that are unnecessary or might conflict with Prettier.
 - [`eslint-import-resolver-alias`](https://www.npmjs.com/package/eslint-import-resolver-alias) - a simple Node behavior import resolution plugin for eslint-plugin-import, supporting module alias.
 - [`eslint-plugin-babel`](https://www.npmjs.com/package/eslint-plugin-babel) - an eslint rule plugin companion to babel-eslint.
@@ -58,6 +63,7 @@ With the right editor setup, your code will automatically be formatted and linte
 
 ### Plugins
 
+- [`eslint-webpack-plugin`](https://github.com/webpack-contrib/eslint-webpack-plugin) - ESLint plugin
 - [`clean-webpack-plugin`](https://github.com/johnagan/clean-webpack-plugin) - Remove/clean build folders
 - [`copy-webpack-plugin`](https://github.com/webpack-contrib/copy-webpack-plugin) - Copy files to build directory
 - [`circular-dependency-plugin`](https://github.com/aackerman/circular-dependency-plugin) - Detect modules with circular dependencies
