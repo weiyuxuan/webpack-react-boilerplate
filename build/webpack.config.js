@@ -26,6 +26,12 @@ const styleLoaders = () => {
         },
       },
     },
+    !isDev && {
+      loader: 'postcss-loader',
+      options: {
+        sourceMap: false,
+      },
+    },
     {
       loader: 'sass-loader',
       options: {

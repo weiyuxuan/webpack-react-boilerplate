@@ -17,10 +17,6 @@
       "options": { "parser": "babel" }
     },
     {
-      "files": "*.tsx?",
-      "options": { "parser": "babel-ts" }
-    },
-    {
       "files": "*.scss",
       "options": { "parser": "scss" }
     },
