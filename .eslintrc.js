@@ -21,9 +21,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['babel', 'react', 'react-hooks', 'import', 'prettier'],
-  rules: {
-    'prettier/prettier': 'error',
-  },
+  rules: {},
   settings: {
     react: {
       pragma: 'React',
