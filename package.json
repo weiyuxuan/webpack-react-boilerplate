@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "version": "0.0.1",
-  "description": "A simple and easy boilerplate for web developer.",
+  "description": "A simple and easy boilerplate for react developer.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/weiyuxuan/react-boilerplate.git"
