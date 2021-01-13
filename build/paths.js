@@ -1,15 +1,15 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   // Source files
-  src: path.resolve(__dirname, "../src"),
+  src: path.resolve(__dirname, '../src'),
 
   // Production files
-  dist: path.resolve(__dirname, "../dist"),
+  dist: path.resolve(__dirname, '../dist'),
 
   // Static files that get copied to build folder
-  public: path.resolve(__dirname, "../public"),
+  public: path.resolve(__dirname, '../public'),
 
   // Node modules
-  modules: path.resolve(__dirname, "../node_modules"),
+  modules: path.resolve(__dirname, '../node_modules'),
 };

@@ -1,15 +1,15 @@
-const paths = require("./paths");
-const base = require("./webpack.config.js");
+const paths = require('./paths');
+const base = require('./webpack.config.js');
 
-const { merge } = require("webpack-merge");
-const webpack = require("webpack");
+const { merge } = require('webpack-merge');
+const webpack = require('webpack');
 
 const config = merge(base, {
   // Set the mode to development
-  mode: "development",
+  mode: 'development',
 
   // Control how source maps are generated
-  devtool: "inline-source-map",
+  devtool: 'inline-source-map',
 
   // Spin up a server for quick development
   devServer: {

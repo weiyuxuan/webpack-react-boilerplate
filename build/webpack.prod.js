@@ -1,15 +1,15 @@
-const paths = require("./paths");
-const base = require("./webpack.config.js");
+const paths = require('./paths');
+const base = require('./webpack.config.js');
 
-const { merge } = require("webpack-merge");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require("terser-webpack-plugin");
+const { merge } = require('webpack-merge');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const config = merge(base, {
   // Set the mode to production
-  mode: "production",
+  mode: 'production',
 
   // Control how source maps are generated
   devtool: false,
@@ -17,8 +17,8 @@ const config = merge(base, {
   // Output Folder
   output: {
     path: paths.dist,
-    publicPath: "/",
-    filename: "js/[name].[contenthash].bundle.js",
+    publicPath: '/',
+    filename: 'js/[name].[contenthash].bundle.js',
   },
 
   // Customize the webpack build process
@@ -26,8 +26,8 @@ const config = merge(base, {
     // Extracts CSS into separate files
     // Note: style-loader is for development, MiniCssExtractPlugin is for production
     new MiniCssExtractPlugin({
-      filename: "styles/[name].[contenthash].css",
-      chunkFilename: "[id].css",
+      filename: 'styles/[name].[contenthash].css',
+      chunkFilename: '[id].css',
     }),
   ],
 
@@ -39,7 +39,7 @@ const config = merge(base, {
     // instead of having their own. This also helps with long-term caching, since the chunks will only
     // change when actual code changes, not the webpack runtime.
     runtimeChunk: {
-      name: "runtime",
+      name: 'runtime',
     },
   },
 
