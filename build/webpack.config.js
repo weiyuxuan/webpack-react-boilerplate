@@ -11,7 +11,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const { NODE_ENV } = process.env;
 const isDev = NODE_ENV === 'development';
 
-const styleLoaders = () => {
+const getStyleLoaders = () => {
   // Loaders are evaluated/executed from right to left (or from bottom to top).
   const loaders = [
     !isDev && MiniCssExtractPlugin.loader,
@@ -78,7 +78,10 @@ const config = {
 
     // ESLint when building
     new ESLintPlugin({
+      files: 'src/**/*.(js|jsx)',
       extensions: ['js', 'jsx'],
+      lintDirtyModulesOnly: true,
+      threads: 2,
     }),
 
     // Copies files from target to destination folder
@@ -114,7 +117,7 @@ const config = {
       { test: /\.(js|jsx)$/, exclude: /node_modules/, use: ['babel-loader'] },
 
       // Styles: Inject CSS into the head with source maps
-      { test: /\.(sa|sc|c)ss$/, use: styleLoaders() },
+      { test: /\.(sa|sc|c)ss$/, use: getStyleLoaders() },
 
       // Images: Copy image files to build folder
       {
