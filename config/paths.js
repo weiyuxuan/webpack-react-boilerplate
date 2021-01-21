@@ -7,7 +7,7 @@ module.exports = {
   // Production files
   dist: path.resolve(__dirname, '../dist'),
 
-  // Static files that get copied to build folder
+  // Static files that get copied to bundle folder
   public: path.resolve(__dirname, '../public'),
 
   // Node modules
