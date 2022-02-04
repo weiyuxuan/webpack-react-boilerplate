@@ -13,7 +13,7 @@ function App() {
       <header className={styles.appHeader}>
         <img src={logo} className={styles.appLogo} alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/components/App.tsx</code> and save to reload.
         </p>
         <a
           className={styles.appLink}

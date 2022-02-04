@@ -12,7 +12,8 @@
     "dev": "cross-env NODE_ENV=development webpack serve --config scripts/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config scripts/webpack.prod.js",
     "lint": "eslint -c .eslintrc --ext .ts,.tsx,.js,.jsx ./src --fix",
-    "stylelint": "stylelint 'src/**/*.scss' --customSyntax=postcss-scss --fix"
+    "stylelint": "stylelint 'src/**/*.scss' --customSyntax=postcss-scss --fix",
+    "prepare": "husky install"
   },
   "bugs": {
     "url": "https://github.com/weiyuxuan/webpack-react-boilerplate/issues"
