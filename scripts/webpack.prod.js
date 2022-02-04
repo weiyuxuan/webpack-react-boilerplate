@@ -1,12 +1,11 @@
-const paths = require('./paths');
-const base = require('./webpack.config.js');
+const paths = require('./paths')
+const base = require('./webpack.common.js')
 
-const { merge } = require('webpack-merge');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const WebpackNotifierPlugin = require('webpack-notifier');
+const { merge } = require('webpack-merge')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 
 const config = merge(base, {
   // Set the mode to production
@@ -30,9 +29,6 @@ const config = merge(base, {
       filename: 'styles/[name].[contenthash].css',
       chunkFilename: '[id].css',
     }),
-
-    // Display build status system notifications to the user
-    new WebpackNotifierPlugin({ emoji: true }),
   ],
 
   // Optimization codes
@@ -53,6 +49,9 @@ const config = merge(base, {
     maxEntrypointSize: 512000,
     maxAssetSize: 512000,
   },
+
+  // Standard output
+  stats: 'normal',
 });
 
 if (process.env.npm_config_report) {
