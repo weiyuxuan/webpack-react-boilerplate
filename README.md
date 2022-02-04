@@ -75,8 +75,6 @@ With the right editor setup, your code will automatically be formatted and linte
 - [`@typescript-eslint/eslint-plugin`](https://www.npmjs.com/package/@typescript-eslint/eslint-plugin) - An ESLint plugin which provides lint rules for TypeScript codebases.
 - [`eslint-config-standard`](https://www.npmjs.com/package/eslint-config-standard) - An ESLint Shareable Config for JavaScript Standard Style.
 - [`eslint-config-standard-react`](https://www.npmjs.com/package/eslint-config-standard-react) - An ESLint Shareable Config for React/JSX support in JavaScript Standard Style.
-- [`eslint-config-prettier`](https://www.npmjs.com/package/eslint-config-prettier) - Turns off all rules that are unnecessary or might conflict with `Prettier`.
-- [`eslint-plugin-prettier`](https://www.npmjs.com/package/eslint-plugin-prettier) - Runs Prettier as an ESLint rule and reports differences as individual ESLint issues.
 
 ### Stylelint
 

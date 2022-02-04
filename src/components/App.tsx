@@ -1,10 +1,13 @@
 import React from 'react'
 import logo from '@assets/logo.svg'
+import useClock from '@hooks/useClock'
 import { REACT_SITE_URL } from '@constants/common'
 
 import styles from './app.m.scss'
 
-const App = () => {
+function App() {
+  const time = useClock()
+
   return (
     <div className={styles.app}>
       <header className={styles.appHeader}>
@@ -20,6 +23,7 @@ const App = () => {
         >
           Learn React
         </a>
+        <p>{time}</p>
       </header>
     </div>
   )
