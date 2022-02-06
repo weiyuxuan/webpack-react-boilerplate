@@ -3,7 +3,7 @@ import logo from '@assets/logo.svg'
 import useClock from '@hooks/useClock'
 import { REACT_SITE_URL } from '@constants/common'
 
-import styles from './app.m.scss'
+import styles from './app.module.scss'
 
 function App() {
   const time = useClock()

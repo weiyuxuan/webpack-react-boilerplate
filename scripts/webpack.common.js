@@ -19,7 +19,7 @@ const getStyleLoaders = () => [
     options: {
       sourceMap: isDev,
       modules: {
-        auto: /\.m\.scss$/i,
+        auto: true,
         mode: 'local',
         localIdentName: '[hash:8]-[local]',
       },

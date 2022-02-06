@@ -10,7 +10,7 @@
     "standard",
     "standard-jsx",
     "standard-react",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   "parserOptions": {
     "ecmaVersion": 2021,

@@ -22,7 +22,7 @@ With the right editor setup, your code will automatically be formatted and linte
 
 ## Quick Start
 
-1. Make sure that you have Node.js 10.13.0(LTS) or above installed.
+1. Make sure that you have Node.js 12.22.10(LTS) or above installed.
 2. Clone this repo using `git clone --depth=1 https://github.com/weiyuxuan/webpack-react-boilerplate.git <YOUR_PROJECT_NAME>`
 3. Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
 4. Run `npm i` to install dependencies.
