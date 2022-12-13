@@ -31,7 +31,7 @@ const config = merge(base, {
     new ReactRefreshWebpackPlugin(),
   ],
 
-  // Only output errors and warnings happen
+  // Only output when errors and warnings happen
   stats: 'errors-only',
 });
 
