@@ -1,4 +1,4 @@
-# Webpack React BoilerPlate
+# Webpack React Boilerplate
 
 A simple and easy boilerplate for react developer, based on webpack 5.
 
@@ -22,7 +22,7 @@ With the right editor setup, your code will automatically be formatted and linte
 
 ## Quick Start
 
-1. Make sure that you have Node.js 14.18.3 or above installed.
+1. Make sure that you have Node.js v14.18.3 or above installed.
 2. Clone this repo using `git clone --depth=1 https://github.com/weiyuxuan/webpack-react-boilerplate.git <YOUR_PROJECT_NAME>`
 3. Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.
 4. Run `npm ci` to install dependencies.
@@ -66,7 +66,7 @@ With the right editor setup, your code will automatically be formatted and linte
 - [`@babel/preset-typescript`](https://babeljs.io/docs/en/babel-preset-typescript) - TypeScript support for Babel.
 - [`@babel/preset-react`](https://babeljs.io/docs/en/babel-preset-react) - JSX support for Babel.
 - [`@babel/plugin-syntax-dynamic-import`](https://babeljs.io/docs/en/babel-plugin-syntax-dynamic-import) - Support dynamic import syntax.
-- [`@@babel/plugin-proposal-optional-chaining`](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining) - Support optional chaining syntax.
+- [`@babel/plugin-proposal-optional-chaining`](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining) - Support optional chaining syntax.
 - [`@babel/plugin-proposal-nullish-coalescing-operator`](https://babeljs.io/docs/en/babel-plugin-proposal-nullish-coalescing-operator) - Support nullish coalescing syntax.
 
 ### ESLint
