@@ -30,6 +30,8 @@
     "downlevelIteration": true,
     // Skip type checking of declaration files
     "skipLibCheck": true,
+    // File name case sensitivity
+    "forceConsistentCasingInFileNames": true,
     // Path alias
     "paths": {
       "@assets/*": ["./src/assets/*"],

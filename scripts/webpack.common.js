@@ -125,10 +125,10 @@ const config = {
 
       // Images: Copy image files to build folder
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: '[path][name].[ext]',
+          filename: '[path][name][ext]',
         },
       },
 
@@ -137,7 +137,7 @@ const config = {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name].[ext]',
+          filename: 'fonts/[name][ext]',
         },
       },
     ],
