@@ -128,7 +128,7 @@ const config = {
         test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/i,
         type: 'asset/resource',
         generator: {
-          filename: '[path][name][ext]',
+          filename: 'images/[path][name][ext]',
         },
       },
 
